@@ -1,0 +1,30 @@
+nav {
+  background: $darkBlue;
+  padding: 2rem 0;
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.nav__links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding-left: 2rem;
+}
+
+.nav__searchbar {
+  padding: 5px 10px;
+  border-radius: 50px;
+  border: none;
+  width: 200px;
+  font-size: 1.6rem;
+}

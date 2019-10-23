@@ -1,0 +1,22 @@
+.header {
+  // background-image: linear-gradient(to bottom, $lightBlue 0%, $darkBlue 100%);
+  background: $darkBlue;
+  height: 800px;
+  clip-path: polygon(0 0, 100% 0, 100% 58%, 0% 80%);
+  color: #fff;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+.header__copy {
+  width: 50%;
+}
+
+.header__illustration {
+  width: 30%;
+}

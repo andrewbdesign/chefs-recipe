@@ -1,5 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react';
+import Header from './Header';
 
-const Landing = () => <div>Landing</div>
+const Landing = () => {
+  return (
+    <Fragment>
+      <Header />
+    </Fragment>
+  );
+};
 
-export default Landing
+export default Landing;

@@ -1,10 +1,12 @@
-import React from 'react'
-import Landing from '../components/landing/index'
+import React from 'react';
+import Nav from './layouts/Nav';
+import Landing from '../components/landing/index';
 
-const App = () => 
+const App = () => (
   <div className="app">
-    <Landing/>
+    <Nav />
+    <Landing />
   </div>
-
+);
 
 export default App;

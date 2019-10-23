@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  padding: 1rem 2rem;
+  display: inline-block;
+  margin-top: 2rem;
+  border-radius: 50px;
+  font-size: 1.6rem;
+
+}
+
+.cta-primary {
+  background: #ecab10;
+  text-decoration: none;
+  color: #fff;
+}
+
+.cta-secondary {
+  color: #fff;
+}
