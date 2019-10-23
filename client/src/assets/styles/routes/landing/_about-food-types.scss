@@ -1,0 +1,22 @@
+.about-food-types {
+  padding-top: 2rem;
+  // background: #f2f2f2;
+
+  .about-food-types__plates {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+
+    img {
+      width: 28%;
+    }
+  }
+
+  .about-food-types__copy {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+}
