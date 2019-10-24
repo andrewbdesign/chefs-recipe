@@ -23,19 +23,15 @@ const Header = () => {
               Learn how to cook something that is simply delicious and
               nutritious!
             </p>
-            <a className="cta cta-primary" href="https://www.google.com">
-              Get started
-            </a>
-            <a className="cta cta-secondary" href="https://www.google.com">
-              Learn more
-            </a>
-          </div>
-          <div className="header__illustration">
-            <Lottie
-              options={defaultOptionsLottie('food-carousel')}
-              isStopped={false}
-              isPaused={false}
-            />
+            <br />
+            <form>
+              <input
+                className="header__searchbar"
+                type="text"
+                placeholder="Look up recipes..."
+              />
+              <button className="header__searchbutton">Search</button>
+            </form>
           </div>
         </div>
       </div>

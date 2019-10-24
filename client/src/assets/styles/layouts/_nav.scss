@@ -1,12 +1,22 @@
 nav {
-  background: $darkBlue;
+  // background: $darkBlue;
+  background: rgba(0, 0, 0, 0.7);
   padding: 2rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .nav__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav__logo {
+  margin-bottom: 0;
 }
 
 .nav__logo {
@@ -19,12 +29,4 @@ nav {
   text-decoration: none;
   font-size: 1.6rem;
   padding-left: 2rem;
-}
-
-.nav__searchbar {
-  padding: 5px 10px;
-  border-radius: 50px;
-  border: none;
-  width: 200px;
-  font-size: 1.6rem;
 }
