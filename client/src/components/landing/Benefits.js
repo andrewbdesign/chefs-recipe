@@ -33,7 +33,7 @@ const Benefits = () => {
     <section className="benefits">
       <div className="container">
         <div className="benefits__container">
-          <h3 className="benefits__heading">Some benefits of each diet</h3>
+          <h3 className="benefits__heading">Get started</h3>
           <div className="benefits-diet__group">
             {renderBenefits(paleoBenefits)}
             {renderBenefits(mediBenefits)}
