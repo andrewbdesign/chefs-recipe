@@ -5,6 +5,7 @@ import AboutFoodTypes from './AboutFoodTypes';
 import NutritionCards from './NutritionCards';
 import NutritionFacts from './NutritionFacts';
 import VideoShowreel from './VideoShowreel';
+import Benefits from './Benefits';
 
 const Landing = () => {
   return (
@@ -15,6 +16,7 @@ const Landing = () => {
       <NutritionCards />
       <NutritionFacts />
       <VideoShowreel />
+      <Benefits />
     </Fragment>
   );
 };

@@ -249,3 +249,36 @@ export const veganNutrition = {
     "Vegans often don't get enough calcium, which can cause weak bones that break easily, as well as n-3 fatty acids EPA and DHA, which are important for brain, eye, and cardiovascular health.",
   ],
 };
+
+export const paleoBenefits = {
+  title: 'Paleo',
+  className: 'paleo',
+  benefits: [
+    'Keeps you feeling fuller longs',
+    'Promotes a leaner Physique',
+    'Better digestion and absorption',
+    'Gives you more energy',
+  ],
+};
+
+export const mediBenefits = {
+  title: 'Mediterranean',
+  className: 'medi',
+  benefits: [
+    'Easier diet to follow',
+    'Best for healthy eating',
+    'Improves Heart Health',
+    'Also helpful for losing weight',
+  ],
+};
+
+export const veganBenefits = {
+  title: 'Vegan',
+  className: 'vegan',
+  benefits: [
+    'Ideal for weight loss',
+    'May help lower blood pressure',
+    'Environmentally friendly',
+    'Best for prevention of diabetes',
+  ],
+};

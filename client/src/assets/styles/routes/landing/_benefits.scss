@@ -1,0 +1,71 @@
+.benefits {
+  background: #f9f9f9;
+}
+
+.benefits__heading {
+  text-align: center;
+  font-weight: 700;
+  font-size: 3.3rem;
+  margin-bottom: 4rem;
+}
+
+.benefits-diet__group {
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    list-style: none;
+
+    li {
+      margin: 20px 0;
+      font-size: 1.4rem;
+
+      img.tick {
+        width: 20px;
+        height: 17px;
+        position: relative;
+        top: 3px;
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+.paleo-benefits {
+  background: $paleo;
+  background-image: url('../../../images/nutrition/icon-paleo.svg');
+}
+
+.medi-benefits {
+  background: $medi;
+  background-image: url('../../../images/nutrition/icon-fish.svg');
+}
+
+.vegan-benefits {
+  background: $vegan;
+  background-image: url('../../../images/nutrition/icon-vegan.svg');
+}
+
+.diet-benefits {
+  background-repeat: no-repeat;
+  background-position: 160% -40%;
+  background-size: 80%;
+  font-size: 1.6rem;
+  color: #fff;
+  padding: 3rem;
+  border-radius: 5px;
+  width: 32%;
+}
+
+.button-primary {
+  background: #ecab10;
+  color: #fff;
+  width: 100%;
+  padding: 1.2rem 0;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: center;
+}
