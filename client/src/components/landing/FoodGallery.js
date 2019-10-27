@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { TweenMax } from 'gsap';
 import axios from 'axios';
 
 const FoodGallery = () => {
@@ -15,6 +16,11 @@ const FoodGallery = () => {
         console.log('res', res.data);
         setRecipeItems(res.data.hits);
         // setData(res.data);
+      })
+      .then(() => {
+        const cards = document.querySelector('.food-gallery__group').children;
+        TweenMax.set(cards, { autoAlpha: 0, y: -10 });
+        TweenMax.staggerTo(cards, 0.6, { autoAlpha: 1, y: 0 }, 0.07, 0);
       })
       .catch(e => {
         console.log('Something went wrong...', e);

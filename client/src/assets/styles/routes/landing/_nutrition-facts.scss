@@ -1,0 +1,148 @@
+.nutrition-facts-heading {
+  background: #65a0bc;
+  font-size: 3.3rem;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 14rem;
+}
+
+.nutrition-facts {
+  padding-top: 0;
+  background: #f9f9f9;
+}
+
+.nutrition-facts__container {
+  position: relative;
+  top: -6rem;
+}
+
+.nutrition-facts__cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nutrition-card,
+.nutrition-benefits,
+.nutrition-risks {
+  padding: 3rem;
+}
+
+.paleo-group,
+.medi-group,
+.vegan-group {
+  width: 32%;
+  background: #fff;
+  box-shadow: 0px 0px 9px rgba(134, 130, 130, 0.27);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.nutrition-card__title {
+  font-size: 2.5rem;
+}
+
+.nutrition-card__list {
+  list-style: none;
+}
+
+.nutrition-card__list-item {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.nutrition__text-right {
+  text-align: right;
+}
+
+hr.thick {
+  height: 5px;
+  border: none;
+  background: #000;
+}
+
+hr.thin {
+  height: 1px;
+  border: none;
+  background: #000;
+}
+
+hr.thick,
+hr.thin {
+  margin-bottom: 2rem;
+}
+
+.nutrition-card p .diet-icon {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.nutrition-card.paleo p .diet-icon {
+  background: $paleo;
+}
+
+.nutrition-card.medi p .diet-icon {
+  background: $medi;
+}
+
+.nutrition-card.vegan p .diet-icon {
+  background: $vegan;
+}
+
+// Nutrition benefits + risks
+.nutrition-benefits,
+.nutrition-risks {
+  position: relative;
+  color: #fff;
+
+  h3 {
+    font-weight: 400;
+  }
+
+  hr.thin {
+    background: #fff;
+  }
+}
+
+// nutrition-benefits
+.nutrition-benefits {
+  background: #47849e;
+  min-height: 400px;
+}
+
+// Nutrition risks
+.nutrition-risks {
+  background: #346f83;
+  height: 350px;
+}
+
+// icons
+.benefit-icon {
+  background: #5FAE76;
+  width: 45px;
+  height: 45px;
+  padding: 9px;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.risk-icon {
+  background: #F46760;
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
