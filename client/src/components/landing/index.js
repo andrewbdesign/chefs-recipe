@@ -4,6 +4,7 @@ import FoodGallery from './FoodGallery';
 import AboutFoodTypes from './AboutFoodTypes';
 import NutritionCards from './NutritionCards';
 import NutritionFacts from './NutritionFacts';
+import VideoShowreel from './VideoShowreel';
 
 const Landing = () => {
   return (
@@ -13,6 +14,7 @@ const Landing = () => {
       <AboutFoodTypes />
       <NutritionCards />
       <NutritionFacts />
+      <VideoShowreel />
     </Fragment>
   );
 };
