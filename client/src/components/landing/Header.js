@@ -1,18 +1,6 @@
 import React from 'react';
-import Lottie from 'react-lottie';
 
 const Header = () => {
-  const defaultOptionsLottie = lottie => {
-    return {
-      loop: true,
-      autoplay: true,
-      animationData: require(`../../assets/lotties/${lottie}.json`),
-      rendererSettings: {
-        preserveAspectRatio: 'xMidYMid slice',
-      },
-    };
-  };
-
   return (
     <section className="header">
       <div className="container">

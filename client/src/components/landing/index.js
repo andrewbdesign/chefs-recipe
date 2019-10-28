@@ -7,11 +7,11 @@ import NutritionFacts from './NutritionFacts';
 import VideoShowreel from './VideoShowreel';
 import Benefits from './Benefits';
 
-const Landing = () => {
+const Landing = ({ onHandleRecipeUpdate }) => {
   return (
     <Fragment>
       <Header />
-      <FoodGallery />
+      <FoodGallery onHandleRecipeUpdate={onHandleRecipeUpdate} />
       <AboutFoodTypes />
       <NutritionCards />
       <NutritionFacts />

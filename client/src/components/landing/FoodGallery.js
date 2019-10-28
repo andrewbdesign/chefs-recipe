@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { TweenMax } from 'gsap';
 import axios from 'axios';
 
 const FoodGallery = () => {
   // Recipes
   const [recipeItems, setRecipeItems] = useState([]);
-  // const [data, setData] = useState(null);
 
   useEffect(() => {
     const url =
@@ -28,19 +28,19 @@ const FoodGallery = () => {
   }, []);
 
   const renderRecipes = () => {
-    // render the recipes here
-    console.log('recipeItems', recipeItems);
     return recipeItems.map((recipeItem, index) => {
       const { label, image } = recipeItem.recipe;
+      const uri = recipeItem.recipe.uri.split('#recipe_')[1];
       return (
-        <div
-          key={index}
-          className="food-gallery__item"
-          style={{ backgroundImage: `url(${image})` }}
-        >
-          <p className="food-gallery__label">{label}</p>
-          <span className="food-gallery__label-shadow"></span>
-        </div>
+        <Link key={index} to={`/recipe?id=${uri}`}>
+          <div
+            className="food-gallery__item"
+            style={{ backgroundImage: `url(${image})` }}
+          >
+            <p className="food-gallery__label">{label}</p>
+            <span className="food-gallery__label-shadow"></span>
+          </div>
+        </Link>
       );
     });
   };
