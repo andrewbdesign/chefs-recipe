@@ -1,34 +1,44 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { TweenMax } from 'gsap';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { getRecipes } from '../../actions/recipes';
 
-const FoodGallery = () => {
+const FoodGallery = ({ recipe, getRecipes }) => {
   // Recipes
-  const [recipeItems, setRecipeItems] = useState([]);
+  // const [recipeItems, setRecipeItems] = useState([]);
+
+  console.log('recipes', recipe);
 
   useEffect(() => {
-    const url =
-      'https://api.edamam.com/search?q=chicken&app_id=bf655e2c&app_key=fe375ce936da737735b2f8cdb27eb3ca&from=0&to=12&calories=591-722&health=alcohol-free';
-    axios
-      .get(url)
-      .then(res => {
-        console.log('res', res.data);
-        setRecipeItems(res.data.hits);
-        // setData(res.data);
-      })
-      .then(() => {
-        const cards = document.querySelector('.food-gallery__group').children;
-        TweenMax.set(cards, { autoAlpha: 0, y: -10 });
-        TweenMax.staggerTo(cards, 0.6, { autoAlpha: 1, y: 0 }, 0.07, 0);
-      })
-      .catch(e => {
-        console.log('Something went wrong...', e);
-      });
+    // const query = recipe.recipes.q;
+    // console.log('query', query);
+    if (!recipe.recipes) {
+      getRecipes('dinner');
+    }
+    // const url =
+    //   'https://api.edamam.com/search?q=chicken&app_id=bf655e2c&app_key=fe375ce936da737735b2f8cdb27eb3ca&from=0&to=12&calories=591-722&health=alcohol-free';
+    // axios
+    //   .get(url)
+    //   .then(res => {
+    //     console.log('res', res.data);
+    //     setRecipeItems(res.data.hits);
+    //     // setData(res.data);
+    //   })
+    //   .then(() => {
+    //     const cards = document.querySelector('.food-gallery__group').children;
+    //     TweenMax.set(cards, { autoAlpha: 0, y: -10 });
+    //     TweenMax.staggerTo(cards, 0.6, { autoAlpha: 1, y: 0 }, 0.07, 0);
+    //   })
+    //   .catch(e => {
+    //     console.log('Something went wrong...', e);
+    //   });
   }, []);
 
   const renderRecipes = () => {
-    return recipeItems.map((recipeItem, index) => {
+    return recipe.recipes.hits.map((recipeItem, index) => {
       const { label, image } = recipeItem.recipe;
       const uri = recipeItem.recipe.uri.split('#recipe_')[1];
       return (
@@ -51,11 +61,11 @@ const FoodGallery = () => {
     <section className="food-gallery">
       <div className="container">
         <div className="food-gallery__container">
-          {recipeItems.length > 0 && (
+          {recipe && (
             <h2 className="food-gallery__title">Recipes Ideas for Dinner</h2>
           )}
           <div className="food-gallery__group">
-            {recipeItems && recipeItems.length > 0 ? renderRecipes() : loading}
+            {recipe && recipe.recipes ? renderRecipes() : loading}
           </div>
         </div>
       </div>
@@ -63,4 +73,20 @@ const FoodGallery = () => {
   );
 };
 
-export default FoodGallery;
+const mapStateToProps = state => ({
+  recipe: state.recipe,
+});
+
+const mapDispatchToProps = {
+  getRecipes,
+};
+
+FoodGallery.propTypes = {
+  recipe: PropTypes.object.isRequired,
+  getRecipes: PropTypes.func.isRequired,
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(FoodGallery);

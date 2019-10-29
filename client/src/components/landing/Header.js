@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { getRecipes } from '../../actions/recipes';
 
-const Header = () => {
+const Header = ({ getRecipes }) => {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const onHandleSearch = e => {
+    e.preventDefault();
+    console.log('searchQuery', searchQuery);
+    getRecipes(searchQuery);
+  };
+
+  const onUpdate = e => {
+    setSearchQuery(e.target.value);
+  };
+
   return (
     <section className="header">
       <div className="container">
@@ -12,13 +27,17 @@ const Header = () => {
               nutritious!
             </p>
             <br />
-            <form>
+            <form onSubmit={onHandleSearch}>
               <input
                 className="header__searchbar"
                 type="text"
                 placeholder="Look up recipes..."
+                onChange={onUpdate}
+                value={searchQuery}
               />
-              <button className="header__searchbutton">Search</button>
+              <button className="header__searchbutton" onClick={onHandleSearch}>
+                Search
+              </button>
             </form>
           </div>
         </div>
@@ -27,4 +46,17 @@ const Header = () => {
   );
 };
 
-export default Header;
+Header.propTypes = {
+  getRecipes: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = null;
+
+const mapDispatchToProps = {
+  getRecipes,
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Header);
