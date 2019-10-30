@@ -49,3 +49,13 @@ footer {
     ;
   }
 }
+
+@media screen and (min-width: $desktop) {
+  .footer__container {
+    flex-direction: row;
+
+    div {
+      width: 32%;
+    }
+  }
+}
