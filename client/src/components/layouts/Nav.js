@@ -10,8 +10,8 @@ const Nav = () => {
             <h2 className="nav__logo">Chef'sRecipe</h2>
           </Link>
           <div className="nav__links">
-            <a href="#!">Explore Cuisines</a>
-            <a href="#!">Culinary Tips</a>
+            <a href="#!">Cuisines</a>
+            <a href="#!">Tips</a>
             <a href="#!">Tools</a>
           </div>
         </div>

@@ -7,9 +7,11 @@ footer {
 .footer__container {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 
   div {
-    width: 32%;
+    // width: 32%;
+    width: 100%;
     padding: 0 3rem;
   }
 }

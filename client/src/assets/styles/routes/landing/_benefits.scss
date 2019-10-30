@@ -12,6 +12,7 @@
 .benefits-diet__group {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 
   ul {
     list-style: none;
@@ -54,7 +55,9 @@
   color: #fff;
   padding: 3rem;
   border-radius: 5px;
-  width: 32%;
+  // width: 32%;
+  width: 100%;
+  margin-bottom: 4rem;
 }
 
 .button-primary {
@@ -68,4 +71,15 @@
   font-weight: 400;
   text-decoration: none;
   text-align: center;
+}
+
+
+@media screen and (min-width: $desktop) {
+  .benefits-diet__group {
+    flex-direction: row;
+  }
+
+  .diet-benefits {
+    width: 32%;
+  }
 }

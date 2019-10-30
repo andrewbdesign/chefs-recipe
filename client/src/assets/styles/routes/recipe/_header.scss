@@ -23,6 +23,11 @@
     z-index: 300;
     border-radius: 5px;
   }
+
+  form {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .recipe-header__container {
@@ -38,9 +43,11 @@
 
 .recipe__group {
   display: flex;
+  flex-direction: column;
 
   div {
-    width: 50%;
+    width: 100%;
+    margin-bottom: 4rem;
   }
 
   a {
@@ -66,4 +73,14 @@ h3 {
 .ingredients-list {
   font-size: 1.6rem;
   list-style-position: inside;
+}
+
+@media screen and (min-width: $desktop) {
+  .recipe__group {
+    flex-direction: row;
+
+    div {
+      width: 50%;
+    }
+  }
 }
